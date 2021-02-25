@@ -1,0 +1,111 @@
+/*
+  Color palette from https://www.pinterest.com/pin/9781324172281372/:
+  rgb(103,187,183)
+  rgb(86,124,152)
+  rgb(120,117,155)
+  rgb(235,121,120)
+  rgb(245,185,161)
+  rgb(245,220,188)
+*/
+html {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(103,187,183);
+
+  /* To make the footer sticky */
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+header {
+    background-color: rgb(86,124,152);
+    /* why does making this 0px leave almost no space at the top
+    and changing it to 1px leaves way more than 1px of space? */
+    padding: 20px;
+    /* w3schools indicated this would center, but clearly it's not doing what I expected */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-title {
+  margin: 0px; /* why isn't it 0px by default? It was 21.440px */
+  font-family: Copperplate, sans-serif;
+  text-align: center;
+  color: rgb(245,185,161);
+}
+
+.vertical-header-spacer {
+  height: 15px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(245,220,188);
+}
+
+.nav-button {
+  padding: 10px;
+  background-color: rgb(120,117,155);
+  color: rgb(245,220,188);
+  font-family: sans-serif;
+  border: 3px solid rgb(103,187,183);
+}
+.nav-button:hover {
+  background-color: rgb(235,121,120);
+}
+
+.nav-spacer {
+  margin: 0 3px;
+}
+
+section {
+  font-family: Garamond, serif;
+}
+
+article {
+  background-color: rgba(235,121,120,0.6);
+}
+
+h2 {
+  color: rgb(86,124,152);
+  text-align: center;
+}
+
+h3 {
+  color: rgb(120,117,155);
+
+}
+
+section a {
+  color: rgb(86,124,152);
+}
+section a:hover {
+  color: rgb(235,121,120);
+}
+
+img {
+  /* Why is there 1px between image and border? */
+  border: 6px solid rgb(120,117,155);
+}
+
+footer {
+  /* Tried a few different things to make footer sticky, from:
+    - https://css-tricks.com/couple-takes-sticky-footer/
+
+  This put it at not-quite the bottom of the content
+  // body { position: relative; }
+  position: absolute;
+  bottom: 0;
+
+  The grid approach at first made the header too tall,
+  but fixed it by wrapping the other body content in a div
+  */
+
+  grid-row-start: 3;
+  grid-row-end: 4;
+}

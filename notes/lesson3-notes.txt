@@ -1,0 +1,51 @@
+Lesson 3: CSS
+
+Video 3: Pseudoclasses and attribute selectors
+- Pseudoclasses: selectors on state, like "is user hovering over this" or some attribute
+- If HTML is
+  <a href="https://blah.com/">Whatever text</a>
+  then the selector looks like
+  a[href="https://blah.com/"] {
+    background-color: blue;
+  }
+
+Video 4: Colors
+-  www.w3schools.com/colors/colors_hexadecimal.html
+- rgba(r, g, b, a[0-1])
+- hsla()
+  - hue 0-360
+  - saturation percentage (0 gray; 0 full color)
+  - lightness percentage (0 black; 100 white)
+  - alpha 0-1
+
+Video 5: Borders
+- Want to use relative units of measurements instead of px when dealing with larger stuff
+  Like:
+  p.important {
+    width: 75%
+  }
+- Units of measurements: Pixels, percentages, and REM (relative to font-size of root element)
+- Prefer to set just width (not both width and height)
+
+Video 6: Precedence rules
+- Inspecting the elements under Elements > Computed tab. See which style is triumphing
+- Whenever styles are being applied in a way that doesn't make sense, check in the browser DevTools for conflicts.
+- Basic selector precedence:
+  - element < class < id
+  - more specific
+  - later in the css file
+
+Video: External style sheet
+- styles.css in styles folder
+- in <head> add <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+Video: Hosting with GitHub Pages
+- GitHub hosting is free
+- FTP: not as common anymore
+1. Email
+2. index.html in root
+3. Push to github repo
+4. Enable Pages in github settings
+https://cheriemarie.github/repo-name
+- Can set up custom urls - talk to your instructor directly or look it up
+- It can take a few minutes. Hard-reload if it takes longer. You may need to clear the cache (Tools > History > Clear browsing data... > Cached images and files)
