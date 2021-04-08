@@ -1,0 +1,64 @@
+Lesson 4 notes
+
+Video 4a.1: Box model
+- Huh, it sounded like at one point she said you usually use px as units for sizing, but then later said "this is just for debugging, we'd never really use pixels" -- is that just for setting a height attribute, or is pixels not commonly used?
+
+- * { box-sizing: border-box }
+  - Box-sizing: border-box should be boilerplate, most projects will have this on all stylesheets. Double check you have this set.
+  - * is a selector for all things -- not commonly used
+  - What does it do? -- it makes height/width control the WHOLE element including content, padding, and border combined. Without it, height/width control only the content.
+
+Video 4b.1: CSS Positioning
+- "Normal flow"
+- position: static
+  - Default; element is placed where it would be in the normal flow. Top/right/bottom/left have no effect
+
+- position: relative
+  - Element is positioned relative to its normal position but offset by top/right/bottom/left
+  - Not removed from normal flow of the page
+
+- position: absolute
+  - Position it relative to its nearest positioned ancestor
+  - Is removed from the flow of the page. Other elements will act like it doesn't exist, so stuff can overlap
+
+- position: fixed
+  - Positioned relative to the browser window; will remain when page is scrolled
+  - Is removed, can overlap
+
+- z-index: control order of elements. Only works with positioned elements.
+
+
+Video 4b.2: Float
+- Can make scrollbars, magazine style
+- Elements can only be floated left or right (all the way l or r to the containing element)
+- With content-box set to float: right, the boxes, they float as right as they can without bumping each other
+  Footer is pretending like the floated boxes don't exist.
+  To change that, use clear: right on the footer
+- To fix the footer another way,
+  Could instead add
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  and make <section class="clearfix">content</section>
+- Overflow
+  - Visible: Default, usually not ideal. Content can leak out of containing element
+  - Auto: Probably gives element a scrollbar to not burst out of containing element
+  - Hidden: Crop, hide extra content. Best for images, not text
+  - Scroll: Gives the element a scrollbar, whether you need it or not (dislike this one)
+  -
+
+Assignment:
+https://flukeout.github.io/
+NOTES:
+- "type" refers to tag, like <p> or <span>, not class or id
+
+Level 10: *
+Level 15: orange:first-child
+Level 20: apple:first-of-type
+Level 25: bento:empty
+
+
+GITHUB NOTE:
+- Change which github user I am logged in as by changing it in Windows Credential Manager
