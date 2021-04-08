@@ -18,6 +18,7 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-rows: 1fr auto;
+  font-family: 'Lexend', sans-serif;
 }
 
 header {
@@ -32,7 +33,7 @@ header {
 
 .page-title {
   margin: 0px; /* why isn't it 0px by default? It was 21.440px */
-  font-family: Copperplate, sans-serif;
+  font-family: 'Lobster', cursive;
   text-align: center;
   color: rgb(245,185,161);
 }
@@ -52,7 +53,7 @@ nav {
   padding: 10px;
   background-color: rgb(120,117,155);
   color: rgb(245,220,188);
-  font-family: sans-serif;
+  font-family: 'Lexend', sans-serif;
   border: 3px solid rgb(103,187,183);
 }
 .nav-button:hover {
@@ -64,7 +65,7 @@ nav {
 }
 
 section {
-  font-family: Garamond, serif;
+  font-family: 'Lexend', sans-serif;
 }
 
 article {
