@@ -78,7 +78,7 @@ article {
 .project-container {
   display: flex;
   flex-flow: row wrap;
-  align-items: space-evenly;
+  align-items: stretch;
   justify-content: space-evenly;
 }
 
