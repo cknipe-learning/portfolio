@@ -1,11 +1,11 @@
 /*
   Color palette from https://www.pinterest.com/pin/9781324172281372/:
-  rgb(103,187,183)
-  rgb(86,124,152)
-  rgb(120,117,155)
-  rgb(235,121,120)
-  rgb(245,185,161)
-  rgb(245,220,188)
+  rgb(103,187,183)  - teal
+  rgb(86,124,152)   - blue
+  rgb(120,117,155)  - purple
+  rgb(235,121,120)  - red
+  rgb(245,185,161)  - orange
+  rgb(245,220,188)  - yellow
 */
 html {
   height: 100%;
@@ -54,10 +54,13 @@ nav {
   background-color: rgb(120,117,155);
   color: rgb(245,220,188);
   font-family: 'Lexend', sans-serif;
+  text-decoration: none;
   border: 3px solid rgb(103,187,183);
+  transition: background-color 0.5s;
 }
 .nav-button:hover {
   background-color: rgb(235,121,120);
+  text-decoration: underline;
 }
 
 .nav-spacer {
@@ -100,16 +103,29 @@ article {
 .project {
   transition: background-color 1s, border 1s;
 }
-
-.project:hover > img {
+.project:hover img {
   border: 6px solid rgb(245,220,188);
 }
 .project img {
   transition: border 1s;
 }
-
 .project a:hover {
   color: rgb(245,220,188);
+}
+
+.project:last-child {
+  background-color: rgba(235,121,120,0.4);
+  border: 6px solid rgba(120,117,155,0.4);
+}
+.project:last-child:hover {
+  background-color: rgb(103,187,183);
+  border: 6px solid rgb(235,121,120);
+}
+.project:last-child:hover img {
+  border: 6px solid rgb(235,121,120);
+}
+.project:last-child a:hover {
+  color: rgb(235,121,120);
 }
 
 h2 {
