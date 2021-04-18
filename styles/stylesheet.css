@@ -93,6 +93,25 @@ article {
   overflow: hidden;
 }
 
+.project:hover {
+  background-color: rgb(245,185,161);
+  border: 6px solid rgb(245,220,188);
+}
+.project {
+  transition: background-color 1s, border 1s;
+}
+
+.project:hover > img {
+  border: 6px solid rgb(245,220,188);
+}
+.project img {
+  transition: border 1s;
+}
+
+.project a:hover {
+  color: rgb(245,220,188);
+}
+
 h2 {
   color: rgb(120,117,155);
   text-align: center;

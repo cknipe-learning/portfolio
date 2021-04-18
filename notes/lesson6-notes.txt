@@ -1,0 +1,66 @@
+UX
+- Areas of focus:
+  1. Discoverability: Users can quickly find info they're likely to want
+  2. Learnability: Users can easily learn how to navigate
+  3. Efficiency: They can do things fast
+  4. Consistency: Basically predictability
+  5. Delight: Users will champion your product with this (knowing audience)
+     - e.g. Github's error page
+- Learn from existing stuff that you like
+
+User Stories
+- mountaingoatsoftware.com/agile/user-stories
+- "As a ____ I want ____ so that ____"
+
+CSS Pseudo Selectors
+- Pseudoclasses let you style stuff in relation to external factors like position of mouse, visited vs. unvisited site links, etc.
+- Pseudo element selected with keyword added to a normal selector. E.g.,
+    p::first-letter { font-size: 200%; }
+    footer a:hover { color: magenta; }
+    aside a { text-decoration: none; color: green; }
+    aside a:visited { color: orange; } // Visited is second most specific
+    aside a:hover { text-decoration: underline; } // Hover is most specific
+    // Most specific styles should be defined last, so define hover state last. Hover is the most specific, visited is the second most specific
+- designshack.net has examples of stuff you can do with hover state
+- Question: Why p::first-letter but a:hover?
+  Pseudo-classes (:) allow you to style the different states of an element e.g. when you hover over it, when it is disabled, when it is the first child of its parent, etc.
+  Pseudo-elements (::) allow you to style different parts of an element e.g. the first line, the first letter, inserting content before or after, etc.
+
+CSS Attribute Selectors
+- Based on arbitrary attributes, like styling internal and external links differently
+- E.g., this is pretty brittle
+    aside li:last-child a { color: blue; }
+- E.g.,
+    a[href="whatever"] { color: blue; }
+- E.g., alerts with structured class names like "alert-x" where x={error, warning, success}
+    p[class^="alert" { border: solid; }]
+- .alert-success { color: green; }
+
+CSS nth-child Selectors
+- Special pseudo selector. Can style based on position or other stuff
+- E.g.,
+    section ul li:nth-child(odd) {}
+- E.g.,
+    .history p {}
+    .history p:nth-child(even) {}
+    .history p:nth-child(3) {} // select the 3rd child of its parent element
+    .history p:nth-child(3n) {} // Every 3rd child of its parent element
+    .history p:nth-child(3n+1) {} // Offset
+- Question: What's the point of the "p:"? Is it like "Of all the nth children, only select the ones of type p"?
+- Search "nth child recipes" and play with it
+
+CSS Transitions
+- How an element will appear when transitioning between two states.
+  Note that you gotta define the endpoint states
+- a:hover {
+    size: 200%;
+  }
+  a {
+    transition-property: font-size;       // Required
+    transition-duration: 4s;              // Required
+    transition-timing-function: ease-out;
+    transition-delay: 2s;
+  }
+- a { transition: font-size 4s ease-in 2s; }  // This is shorthand for the above
+- a { transition: border 3s 3s; } // You can omit an optional one
+- Check out the mozilla developer site: https://developer.mozilla.org/en-US/docs/Web/CSS/transition
