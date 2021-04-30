@@ -1,0 +1,29 @@
+Lesson 7
+User stories:
+  - As a prospective student I want to see if the studio is the right vibe for me
+  - As an interested student I want to see if I'd rather sign up for a class or private lessons
+  - As an interested student I want to sign up for a class
+  - As an interested student I want to know how to sign up for private lessons
+  - As a student I want to find my schedule
+  - As the owner, I want prospective students to be encouraged and interested to sign up for a service
+  - As a mobile user, I want to be able to navigate the site easily
+  - As a desktop browser user, I want to be able to navigate the site easily
+  Bonus or not sure:
+  - As an interested student I want to purchase classes or private lessons on the site
+  - As a student, I want to show something to my friends to share what this whole archery thing is about
+
+Pages:
+  Home
+  Services
+    Classes
+    Class Schedule
+    Private lessons
+  About
+    Us
+      Nondiscriminatory policy
+    Owner
+    Instructors
+    Contact
+
+Elements:
+  Footer

@@ -1,0 +1,9 @@
+Lesson 8
+
+Video and Audio Elements
+
+HTML Custom Grids
+
+
+NOTE:
+- Add lesson 7 project to the project portfolio page
