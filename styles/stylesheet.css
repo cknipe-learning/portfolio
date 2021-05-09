@@ -79,6 +79,7 @@ article {
   background-color: rgba(235,121,120,0.6);
 }
 
+/* ---------- Projects ---------- */
 .project-container {
   display: flex;
   flex-flow: row wrap;
@@ -151,7 +152,10 @@ img {
 }
 
 /* ---------- Contact ---------- */
-/* TODO: Fix: When you expand the textarea, the header moves */
+/* DONE: When you expand the textarea, the header moves
+  --> I think this was only happening with display:block,
+  when there seemed to be some ad-hoc right margin added
+  (but wouldn't show in the box model diagram, so ???) */
 input, select, textarea, fieldset {
   background-color: rgba(235,121,120,0.6);
   border: 6px solid rgb(120,117,155);
