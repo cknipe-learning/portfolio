@@ -1,9 +1,52 @@
 Lesson 8
 
 Video and Audio Elements
+- Best practice for browser compatibility is to use multiple file types of the same video
+  Like
+    <video width="300" height= "300" controls>
+       <source src="cats.mp4" type="video/mp4">
+       <source src="cats.ogg" type="video/ogg">
+       Sorry, your browser does not support video.
+    </video>
 
 HTML Custom Grids
+- class="grid" and class="col" > class="row span a-of-b" x 12 and class="row" > class="col span a-of-b"
+- box-sizing: border-box // so padding and border don't add extra width to our columns
+- can use open source grid options
 
+CSS Grids
+- Float and position elements have no effect on grid stuff
+- html snippet in atom
+- HTML: class="grid-container" > class="grid-item-1"
+  CSS:
+    .grid-container {
+      display: grid; or display: inline-grid;
+      grid-column-gap: 20px; // vertical space
+      grid-row-gap: 30px;    // horizontal space
+      grid-gap: 20px 30px; // column row
+      grid-template-rows: auto auto auto auto; // consistent size grid
+      grid-template-columns: 20px 30px 40px 50px; // Sizes of grid boxes
+    }
+    .grid-item-1 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    .grid-item-2 {
+      grid-column: 2 / 3;
+      grid-row: 1/2;
+    }
+    .grid-item-3 {
+      grid-column: 1 / span 2;
+      grid-row: 3 / span 1;
+    }
+    .grid-item-4 {
+      grid-area: 4 / 2 / 5 / 3; // Start 4th row, 2nd column,
+    }
+    etc.
+- w3schools grid info
+- It's recommended to use em or rem instead of px
+- The quiz asks about Bootstrap - scales up to 12 columns
 
-NOTE:
-- Add lesson 7 project to the project portfolio page
+- Grid teaching game: http://cssgridgarden.com/

@@ -1,0 +1,26 @@
+Lesson 9
+
+Web Forms
+
+Video 1
+- HTTP
+  - Messages sent are requests and responses
+  - For requests to transfer data from client to server in HTTP, forms usually use either
+      - GET: page refreshes and it'll append submitted data to url of page. This is dangerous for sensitive info.
+    or
+      - POST: meant to change data. Like change data in a database. Like submitting a tweet reply. Only send the data to the endpoint specified in the attribute.
+      Carries request parameter in message body
+
+
+Video 2
+- Using the JavaScript form handler, use camel case for input name attribute
+- Submit type of input does not need a label.
+  Others (like text input type) does need a label enclosing it
+- Your JavaScript form handler should do any non-basic validation.
+  HTML can do email validation of @ and . in there
+
+
+Video 3
+- fieldset are block elements,
+  others like <> are inline elements
+- See 9-webforms directory project for more

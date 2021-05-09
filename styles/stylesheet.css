@@ -4,6 +4,7 @@
   rgb(86,124,152)   - blue
   rgb(120,117,155)  - purple
   rgb(235,121,120)  - red
+    rgb(190,149,146)- 0.6 alpha red on the teal background
   rgb(245,185,161)  - orange
   rgb(245,220,188)  - yellow
 */
@@ -147,6 +148,70 @@ section a:hover {
 img {
   /* Why is there 1px between image and border? */
   border: 6px solid rgb(120,117,155);
+}
+
+/* ---------- Contact ---------- */
+/* TODO: Fix: When you expand the textarea, the header moves */
+input, select, textarea, fieldset {
+  background-color: rgba(235,121,120,0.6);
+  border: 6px solid rgb(120,117,155);
+  color: rgb(86,124,152);
+  font-family: 'Lexend', sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin: 0 0 10px 0;
+  padding: 5px;
+}
+input:focus, select:focus, textarea:focus, fieldset:focus {
+  background-color: rgb(245,185,161);
+  border: 6px solid rgb(245,220,188);
+}
+
+/* Remove autofill styling */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px rgb(190,149,146) inset !important;
+  -webkit-text-fill-color: rgb(86,124,152);
+}
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px rgb(245,185,161) inset !important;
+
+}
+/* input:-internal-autofill-selected {
+  background-color: rgba(235,121,120,0.6);
+  border: 6px solid rgb(120,117,155);
+} */
+/* input:-internal-autofill-selected {
+  background-color: rgba(235,121,120,0.6);
+  border: 6px solid rgb(120,117,155);
+} */
+
+fieldset {
+  display: inline-block;
+}
+fieldset input {
+  display: inline;
+  margin: 0 5px 0 0;
+}
+fieldset label {
+  display: block;
+  margin: 5px;
+}
+
+input[type="submit"] {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+input[type="submit"]:hover {
+  background-color: rgb(245,185,161);
+  border: 6px solid rgb(245,220,188);
+  color: rgb(245,220,188);
+  cursor: pointer;
+}
+input[type="submit"] {
+    transition: background-color 0.5s, border 0.5s, color 0.5s;
 }
 
 footer {

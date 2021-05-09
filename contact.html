@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Carissa's HTML100 Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+    <script src="https://kit.fontawesome.com/b20afd71fd.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&family=Lobster&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <h1 class="page-title">Carissa's HTML100 Portfolio</h1>
+        <div class="vertical-header-spacer"> </div>
+        <nav>
+          <a href="index.html" class="nav-button">Home</a>
+          <div class="nav-spacer">|</div>
+          <a href="projects.html" class="nav-button">Portfolio</a>
+          <div class="nav-spacer">|</div>
+          <a href="contact.html" class="nav-button">Contact</a>
+        </nav>
+      </header>
+
+      <section>
+        <h2>Contact me</h2>
+        <p>Ok so this won't actually contact me currently</p>
+
+        <form method="GET">
+          <label>Your name<br>
+            <input type="text" name="name">
+          </label>
+
+          <label><br>Your email<br>
+            <input type="email" name="email">
+          </label>
+
+          <label><br>What kinda thing do you want to contact me about?<br>
+            <select name="topic-category">
+              <option value="">Please select...</option>
+              <option value="sale">I want to buy or commission your art!</option>
+              <option value="hate">I want to send you hate mail</option>
+              <option value="other">Something else!</option>
+            </select>
+          </label>
+
+          <label><br>Ok, what is it? :)<br>
+            <textarea name="message-content" rows="8" cols="40"></textarea>
+          </label>
+
+          <br>Is this message urgent? (Response desired within 1 week)<br>
+          <fieldset>
+            <label>
+              <input type="radio" name="isUrgent" value="false">Nah, it's chill
+            </label>
+            <label>
+              <input type="radio" name="isUrgent" value="true">Yes please!
+            </label>
+          </fieldset>
+
+          <br>
+          <input type="submit" value="Submit">
+
+        </form>
+      </section>
+    </div>
+
+    <footer>
+      <p>This page built by Carissa, in 2021.</p>
+    </footer>
+  </body>
+</html>
