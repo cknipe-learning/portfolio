@@ -176,14 +176,6 @@ input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 30px rgb(245,185,161) inset !important;
 
 }
-/* input:-internal-autofill-selected {
-  background-color: rgba(235,121,120,0.6);
-  border: 6px solid rgb(120,117,155);
-} */
-/* input:-internal-autofill-selected {
-  background-color: rgba(235,121,120,0.6);
-  border: 6px solid rgb(120,117,155);
-} */
 
 fieldset {
   display: inline-block;
@@ -195,6 +187,44 @@ fieldset input {
 fieldset label {
   display: block;
   margin: 5px;
+}
+
+/* Custom radio buttons */
+.hide-radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+fieldset label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px solid rgb(86,124,152);
+  background-color: rgb(190,149,146);
+}
+fieldset label:hover {
+  color: rgb(245,220,188);
+}
+fieldset label:hover input ~ .custom-radio {
+  border-color: rgb(245,220,188);
+}
+fieldset input:checked ~ .custom-radio {
+  background-color: rgb(86,124,152);
 }
 
 input[type="submit"] {
