@@ -47,6 +47,10 @@ A11y Technical implementation
 
 Assignment
 - Course project (portfolio)
+  1. Changed color for better contrast, made sure it looked ok with achromatopsia emulation
+  2. Changed link hover feedback to toggle the underline because the colors made it hard to see hover feedback
+  3. Made image descriptions more descriptive
+  4. Would like to know why NVDA was only reading links aloud & fix it
 - Architecture project (archery)
   - Captioned the photos
   - Check the zoom
