@@ -7,14 +7,29 @@
     rgb(190,149,146)- 0.6 alpha red on the teal background
   rgb(245,185,161)  - orange
   rgb(245,220,188)  - yellow
+
+  rgb(214,245,243)  - light teal
+  rgb(48,82,117)    - dark blue
+  rgb(97,51,142)    - dark purple
 */
+:root {
+  --color-light-teal: rgb(214,245,243);
+  --color-light-yellow: rgb(255,230,188);
+  --color-light-orange: rgb(255,209,184);
+  --color-medium-teal: rgb(103,187,183);
+  --color-medium-red: rgb(235,121,120);
+  --color-dark-red: rgb(150,49,84);
+  --color-dark-blue: rgb(22,40,75);
+  --color-dark-purple: rgb(97,51,142);
+}
+
 html {
   height: 100%;
 }
 
 body {
-  background-color: rgb(103,187,183);
-
+  background-color: var(--color-light-teal);
+  color: var(--color-dark-blue);
   /* To make the footer sticky */
   min-height: 100%;
   display: grid;
@@ -23,7 +38,7 @@ body {
 }
 
 header {
-    background-color: rgb(86,124,152);
+    background-color: var(--color-dark-blue);
     /* why does making this 0px leave almost no space at the top
     and changing it to 1px leaves way more than 1px of space? */
     padding: 20px;
@@ -36,7 +51,7 @@ header {
   margin: 0px; /* why isn't it 0px by default? It was 21.440px */
   font-family: 'Lobster', cursive;
   text-align: center;
-  color: rgb(245,185,161);
+  color: var(--color-light-orange);
 }
 
 .vertical-header-spacer {
@@ -47,20 +62,21 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(245,220,188);
+  color: var(--color-light-yellow);
 }
 
 .nav-button {
   padding: 10px;
-  background-color: rgb(120,117,155);
-  color: rgb(245,220,188);
+  background-color: var(--color-light-yellow);
+  color: var(--color-dark-blue);
   font-family: 'Lexend', sans-serif;
   text-decoration: none;
-  border: 3px solid rgb(103,187,183);
-  transition: background-color 0.5s;
+  border: 3px solid var(--color-light-orange);
+  transition: background-color 0.5s, border-color 0.5s;
 }
 .nav-button:hover {
-  background-color: rgb(235,121,120);
+  background-color: var(--color-light-orange);
+  border-color: var(--color-medium-red);
   text-decoration: underline;
 }
 
@@ -74,9 +90,9 @@ section {
 
 article {
   padding: 10px;
-  border: 6px solid rgb(120,117,155);
+  border: 6px solid var(--color-light-orange);
   margin: 10px 0;
-  background-color: rgba(235,121,120,0.6);
+  background-color: var(--color-light-yellow);
 }
 
 /* ---------- Projects ---------- */
@@ -88,67 +104,70 @@ article {
 }
 
 .project {
-  background-color: rgba(235,121,120,0.6);
+  background-color: var(--color-light-yellow);
   width: 250px;
   height: 250px;
   margin: 15px;
-  border: 6px solid rgb(120,117,155);
+  border: 6px solid var(--color-light-orange);
   padding: 10px;
   word-wrap: break-word;
   overflow: hidden;
 }
 
 .project:hover {
-  background-color: rgb(245,185,161);
-  border: 6px solid rgb(245,220,188);
+  background-color: var(--color-light-orange);
+  border: 6px solid var(--color-medium-red);
 }
 .project {
   transition: background-color 1s, border 1s;
 }
 .project:hover img {
-  border: 6px solid rgb(245,220,188);
+  border: 6px solid var(--color-medium-red);
 }
 .project img {
   transition: border 1s;
 }
 .project a:hover {
-  color: rgb(245,220,188);
+  color: var(--color-dark-red);
 }
 
 .project:last-child {
-  background-color: rgba(235,121,120,0.4);
-  border: 6px solid rgba(120,117,155,0.4);
+  background-color: rgba(255,230,188,0.4);
+  border: 6px solid rgba(255,209,184,0.4);
+}
+.project:last-child img {
+  border: 6px solid rgba(255,209,184,0.4);
 }
 .project:last-child:hover {
-  background-color: rgb(103,187,183);
-  border: 6px solid rgb(235,121,120);
+  background-color: var(--color-light-teal);
+  border: 6px solid var(--color-dark-red);
 }
 .project:last-child:hover img {
-  border: 6px solid rgb(235,121,120);
+  border: 6px solid var(--color-dark-red);
 }
 .project:last-child a:hover {
-  color: rgb(235,121,120);
+  color: var(--color-dark-red);
 }
 
 h2 {
-  color: rgb(120,117,155);
+  color: var(--color-dark-red);
   text-align: center;
 }
 
 h3 {
-  color: rgb(86,124,152);
+  color: var(--color-dark-blue);
 }
 
 section a {
-  color: rgb(86,124,152);
+  color: var(--color-dark-blue);
 }
 section a:hover {
-  color: rgb(235,121,120);
+  color: var(--color-medium-red);
 }
 
 img {
   /* Why is there 1px between image and border? */
-  border: 6px solid rgb(120,117,155);
+  border: 6px solid var(--color-light-orange);
 }
 
 /* ---------- Contact ---------- */
@@ -157,9 +176,9 @@ img {
   when there seemed to be some ad-hoc right margin added
   (but wouldn't show in the box model diagram, so ???) */
 input, select, textarea, fieldset {
-  background-color: rgba(235,121,120,0.6);
-  border: 6px solid rgb(120,117,155);
-  color: rgb(86,124,152);
+  background-color: var(--color-light-yellow);
+  border: 6px solid var(--color-light-orange);
+  color: var(--color-dark-blue);
   font-family: 'Lexend', sans-serif;
   font-weight: bold;
   font-size: 0.9em;
@@ -167,18 +186,17 @@ input, select, textarea, fieldset {
   padding: 5px;
 }
 input:focus, select:focus, textarea:focus, fieldset:focus {
-  background-color: rgb(245,185,161);
-  border: 6px solid rgb(245,220,188);
+  background-color: var(--color-light-orange);
+  border: 6px solid var(--color-medium-red);
 }
 
 /* Remove autofill styling */
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px rgb(190,149,146) inset !important;
-  -webkit-text-fill-color: rgb(86,124,152);
+  -webkit-box-shadow: 0 0 0 30px var(--color-light-yellow) inset !important;
+  -webkit-text-fill-color: var(--color-dark-blue);
 }
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 30px rgb(245,185,161) inset !important;
-
+  -webkit-box-shadow: 0 0 0 30px var(--color-light-orange) inset !important;
 }
 
 fieldset {
@@ -218,17 +236,17 @@ fieldset label {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  border: 2px solid rgb(86,124,152);
-  background-color: rgb(190,149,146);
+  border: 2px solid var(--color-dark-blue);
+  background-color: var(--color-light-yellow);
 }
 fieldset label:hover {
-  color: rgb(245,220,188);
+  color: var(--color-medium-red);
 }
 fieldset label:hover input ~ .custom-radio {
-  border-color: rgb(245,220,188);
+  border-color: var(--color-medium-red);
 }
 fieldset input:checked ~ .custom-radio {
-  background-color: rgb(86,124,152);
+  background-color: var(--color-dark-blue);
 }
 
 input[type="submit"] {
@@ -239,9 +257,9 @@ input[type="submit"] {
   padding: 10px;
 }
 input[type="submit"]:hover {
-  background-color: rgb(245,185,161);
-  border: 6px solid rgb(245,220,188);
-  color: rgb(245,220,188);
+  background-color: var(--color-light-orange);
+  border: 6px solid var(--color-medium-red);
+  color: var(--color-medium-red);
   cursor: pointer;
 }
 input[type="submit"] {

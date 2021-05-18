@@ -1,0 +1,103 @@
+Lesson 10
+
+DOM
+- It's a set of specifications
+- Based on HTML elements, which semi-map to nodes
+- JavaScript can change the DOM, like when you open a menu
+
+Web Accessibility
+- Check the WAI site
+- Screen reader
+  - Mac: CMD+f5
+  - nvaccess.org
+
+
+A11y Technical implementation
+- Screenreader-only content (extra info about links and navigation, like skip links)
+  you want to hide it visually but make it appear for screenreaders.
+  - Option 1:
+  .hidden {
+    position: relative;
+    left: -10000px;
+    top: auto;
+  }
+  .hidden:focus {
+    left: 0;
+  }
+  - Option 2:
+  .sr-only { // Introduced by bootstrap, has come into common use
+    position: absolute;
+    left: -100000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  <p>Adopt a pet from <span class="sr-only">this link opens in a new tab</span><a href="humanesociety.org">
+- Tab index
+  <a href="#cats" tabindex="1">Cats</a>
+  It'll go back to the beginning
+  Don't do this usually
+- Zooming
+  Ctrl +
+  If using percentages and rems to size things this should be easy to get right
+- Image alt tags
+  "handsome brown dog smiling in a sunny field"
+
+
+Assignment
+- Course project (portfolio)
+- Architecture project (archery)
+  - Captioned the photos
+  - Check the zoom
+  - Check color blindness sim
+  - Make nav skippable
+  - Describe link content
+
+
+Accessibility implementation Slideshow
+- Contrast between text and background color should be 4.5:1 for
+normal-sized text, 3:1 for large text.
+Contrast checker tool (for hex value colors):
+hDp://webaim.org/resources/contrastchecker/
+
+- Every form input should have a corresponding label, correctly
+connected to it.
+
+- > Color blindness simulator:
+https://www.color-blindness.com/coblis-color-blindness-simulator/
+
+- > Clickable elements are large, have space between them.
+
+- Make nav skippable: Screen reader users don’t want to listen to a lot of nav links. If
+there are many nav items, provide a (hidden) link to skip to
+main content.
+
+- Screen reader only content:
+Bootstrap provides the “sr-only” class. Any content tagged
+with it will be hidden visually but made available to screen
+readers.
+> You can recreate this funcJonality very easily by using media
+queries, custom styling, or aria labels.
+> hDps://accessible360.com/accessible360-blog/use-aria-labelscreen-reader-text/
+
+- Skip focus on items that aren't actually clickable
+  <nav>…</nav>
+  <a	name	="content"	tabindex="-1">x</a>
+  <h2>Welcome	to	Site!</h2>
+Otherwise don't manually set tab index on page items
+
+- Meaningfully describe content of links
+
+- Zoomable to 200% without breaking page layout
+
+- Descriptive, Unique page titles
+
+- Image alt: good description for important images, a blank string for purely decorative images
+
+- Headings are the signposts of the DOM tree
+
+- SEO and A11y both benefit from clear, accurate labeling and
+organization of informaJon. Luckily, that’s just what HTML is
+good at!
+Learn more: hDps://moz.com/blog/accessibility-seo-1
