@@ -95,6 +95,24 @@ article {
   background-color: var(--color-light-yellow);
 }
 
+h2 {
+  color: var(--color-dark-red);
+  text-align: center;
+}
+
+h3 {
+  color: var(--color-dark-blue);
+}
+
+section a {
+  color: var(--color-dark-blue);
+  text-decoration: none;
+}
+section a:hover {
+  color: var(--color-medium-red);
+  text-decoration: underline;
+}
+
 /* ---------- Projects ---------- */
 .project-container {
   display: flex;
@@ -127,8 +145,12 @@ article {
 .project img {
   transition: border 1s;
 }
+.project a {
+  text-decoration: none;
+}
 .project a:hover {
   color: var(--color-dark-red);
+  text-decoration: underline;
 }
 
 .project:last-child {
@@ -147,22 +169,6 @@ article {
 }
 .project:last-child a:hover {
   color: var(--color-dark-red);
-}
-
-h2 {
-  color: var(--color-dark-red);
-  text-align: center;
-}
-
-h3 {
-  color: var(--color-dark-blue);
-}
-
-section a {
-  color: var(--color-dark-blue);
-}
-section a:hover {
-  color: var(--color-medium-red);
 }
 
 img {
