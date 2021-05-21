@@ -50,8 +50,15 @@ Assignment
   1. Changed color for better contrast, made sure it looked ok with achromatopsia emulation
   2. Changed link hover feedback to toggle the underline because the colors made it hard to see hover feedback
   3. Made image descriptions more descriptive
-  4. Would like to know why NVDA was only reading links aloud & fix it
+  4. Confirmed that each page is readable at 200% zoom
+  5. Confirmed the site could be navigated using NVDA
+  6. Confirmed that it was readable using the browser tools colorblindness sim
 - Architecture project (archery)
+  1. Darkened the header to make the contrast with the white text easier to read
+  2. Added "Home" to make the page title more descriptive
+  3. Updated image descriptions
+  4. Added a transcript for the video in a linked .txt file
+
   - Captioned the photos
   - Check the zoom
   - Check color blindness sim
